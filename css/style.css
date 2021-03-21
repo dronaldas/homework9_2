@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@300&display=swap');
 .history {
     max-width: 700px;
     margin: 0 auto;
@@ -26,7 +27,7 @@ align-items: center;
 }
 .container5 p {
     width: 60px;
-    font-family: sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 14px;
 }
 .image {
@@ -62,7 +63,7 @@ align-items: center;
 }
 h2 {
     margin: 0 auto;
- 
+    font-family: 'Montserrat', sans-serif;
 }
 .container5 {
     justify-content: center;
@@ -97,7 +98,7 @@ h2 {
     .line {
         background: lightgray;
         width: 2px;
-        height: 1290px;
+        height: 1360px;
         position: absolute;
         left: 55px;
         top: 10px;
