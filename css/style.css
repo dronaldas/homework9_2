@@ -1,22 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@300&display=swap');
+body {
+    margin-top: 150px;
+}
 .history {
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
-    margin-top: 100px;
     position: relative;
 }
 .container {
     display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+h2, p {
+padding-left: 30px;
+padding-right: 30px;
 }
 .text {
-    max-width: 300px;
+flex-grow: 1;
+width: 1px;
+
 }
+.image {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+    border: 10px solid lightgrey;
+    overflow: hidden;
+}
+.container:after {
+    content: "";
+    width: 1px;
+    flex-grow: 1;
+}
+
+
 .container2, .container4 {
     flex-direction: row-reverse;
-    margin-right: -5px;
-}
-.container1, .container3 {
-    margin-left: -5px;
 }
 .container5 .image {
 text-align: center;
@@ -25,19 +46,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-.container5 p {
-    width: 60px;
-    font-family: 'Roboto Slab', serif;
-    font-size: 14px;
-}
-.image {
-    width: 100px;
-    height: 100px;
-    background-size: cover;
-    border-radius: 50%;
-    border: 5px solid lightgrey;
-    overflow: hidden;
-}
+
+
 .container1 .image {
     background-image: url('../images/1.jpg');
     background-position: center;
@@ -65,43 +75,57 @@ h2 {
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
 }
-.container5 {
-    justify-content: center;
-}
-.line {
+
+.history:last-child:after {
+    content: "";
     background: lightgray;
     width: 2px;
-    height: 850px;
+    height: 100%;
     position: absolute;
     left: 50%;
     right: 50%;
-    top: 10px;
+    top: 0px;
     z-index: -1;
 }
+.history .container:nth-child(odd) {
+    text-align: right;
+}
+
+.container5:before {
+    content: "";
+    width: 1px;
+    flex-grow: 1;
+}
 
 
 
-@media (max-device-width: 840px) {
+@media (max-width: 840px) {
     .container {
+        margin: 0;
         flex-direction: row-reverse;
-        justify-content: flex-end;
-        margin: 0 auto;
-        margin-bottom: 40px;
     }
     .image {
-        transform: scale(0.6);
-        margin-top: -25px;
+        transform: scale(0.7);
+
     }
     .text {
-        max-width: 180px;
+        text-align: left;
+        max-width: 100%;
+        display: block;
     }
-    .line {
-        background: lightgray;
-        width: 2px;
-        height: 1360px;
-        position: absolute;
-        left: 55px;
-        top: 10px;
-        z-index: -1;
+    /* .container5:before{
+        content: "";
+        width: 70%;
+        margin-right: -40px;
+    } */
+    .history:last-child:after {
+        left: 60px;
+        height: 95%;
+        transform: translateY(20px);
     }
+    .container:after {
+    display: none;
+    }
+
 }
+   
